@@ -1,0 +1,203 @@
+Các thao tác với mảng
+- for, forEach
+- map
+- filter
+- find 
+- reduce
+- includes
+- findIndex
+- indexOf
+- slice
+- splice
+- every
+- some
+
+
+1. forEach
+- Ưu điểm: 
+    + Code rõ ràng
+    + Ngắn gọn hơn trong việc sử dụng vòng lặp for hay while
+- Nhược điểm:
+    + Không thể dừng vòng lặp sớm
+
+2. map
+- Ưu điểm:
+    + Ngắn gọn, dễ sử dụng
+    + Trả về 1 mảng mới có số phần tử bằng với mảng gốc
+    + Không làm thay đổi mảng gốc
+- Nhược điểm
+    + Không thể dừng vòng lặp sớm
+
+
+3. filter
+Ưu điểm:
+    - Ngắn gọn dễ sử dụng
+    - Lọc dữ liệu mảng dễ dàng và nhanh chóng hơn
+    - Quản lí dữ liệu dễ dàng (có thể tách biệt và sử lí các phần tử trong mảng)
+    - Có thể kết hợp với các hàm khác sau khi thực hiện filter
+    - Không làm thay đổi mảng gốc
+
+Nhược điểm:
+    - Hiệu suất chậm đối với các mảng lớn
+
+
+4. find
+Ưu điểm
+    - Cú pháp đơn giản và dễ hiểu
+    - Tìm kiếm phần tử với các điều kiện phức tạp
+    - Trả về giá trị của phần tử
+    - Có thể tìm kiếm object
+
+Nhược điểm
+    - Hiệu suất chậm
+
+5. reduce
+Ưu điểm:
+    - Tối ưu hóa mã nguồn và tăng hiệu suất chương trình
+    - Ngẵn gọn dễ đọc hơn
+    - Không làm thay đổi mảng gốc
+
+Nhược điểm:
+    - Không thể được sử dụng cho các mảng rỗng
+    - Không phù hợp cho mảng có kích thước lớn
+
+-> Là sự kết hợp giữa map và filter
+
+6. findIndex 
+Ưu điểm:
+    - Dễ sử dụng
+    - Tìm kiếm phần tử trong các điều kiện phức tạp
+    - Trả về chỉ mục
+    - Có thể tìm kiếm object
+
+Nhược điểm
+    - Hiệu suất chậm
+
+7. indexOf
+Ưu điểm:
+    - Cú pháp đơn giản, dễ hiểu
+    - Trả về chỉ mục
+    - Hiệu suất tương đối cao
+
+Nhược điểm: 
+    - Không thể tìm kiếm object
+
+8. includes
+Ưu điểm:
+    - Dễ sử dụng
+    - Trả về giá trị Boolean
+
+Nhược điểm
+    - Không hỗ trợ điều kiện phức tạp
+
+
+9. slice
+Ưu điểm:
+    - Ngắn gọn dễ sử dụng tiết kiệm thời gian
+    - Trích xuất một phần của mảng từ vị trí start đến end (không bao gồm end)
+    - Không làm thay đổi mảng gốc
+    - Trả về mảng mới sau khi cắt
+
+Nhược điểm:
+    - Hiệu suất chậm khi thao tác với mảng lớn
+
+10. splice
+Ưu điểm:
+    - Linh hoạt: cung cấp nhiều khả năng thao tác với mảng (remove, add, insert)
+    - Làm thay đổi mảng ban đầu
+    - Kết hợp với các phương thức khác
+
+Nhược điểm:
+    - Làm thay đổi mảng ban đầu
+    - Hiệu suất chậm khi thao tác với mảng lớn
+
+11. some
+Ưu điểm:
+    - Ngẵn gọn dễ sử dụng tiết kiệm thời gian
+    - Kiểm tra xem có ít nhất một phần tử của mảng thỏa mãn điều kiện ở hàm được truyền vào hay không
+    - Không làm thay đổi mảng ban đầu
+
+12. every
+Ưu điểm
+    - Ngẵn gọn dễ sử dụng tiết kiệm thời gian
+    - Kiểm tra xem tất cả các phần tử có thỏa mãn điều kiện hay không
+    - Không làm thay đổi mảng ban đầu
+
+
+So sánh các hàm thao tác với mảng:
+
+So sánh for và forEach
+for: 
+    - Truy cập đến giá trị index
+    - Performance nhanh hơn
+    - Có thể sử dụng break để thoát khỏi vòng lặp
+    - Hoạt động với await
+
+forEach:
+    - Truy xuất đến phần tử trong element và index
+    - Performance chậm hơn
+    - Không thể sử dụng break để thoát khỏi vòng lặp
+    - Không hoạt động với await 
+
+
+So sánh forEach và map
+forEach: 
+    - Trả về undefined
+    - Hàm callback có thể thay đổi trực tiếp mảng ban đầu
+
+map: 
+    - Trả về 1 mảng mới có số phần tử bằng với mảng gốc
+    - Không thay đổi mảng gốc
+    - Có khả năng kết hơn với các method khác: 
+        + Vì map() sẽ return về một mảng và khi đó nó có thể kết hợp với các method khác (như filter, reduce, sort, ...)
+
+-> Về hiệu suất thì 2 hàm này sẽ tùy thuộc vào mục đích sử dụng và xác định cái nào có performance tốt hơn
++ Nếu không muốn thay đổi dữ liệu trong mảng nhưng thay vào đó chỉ muốn làm gì với nó thì nên sử dụng forEach
++ Nếu muốn thay đổi dữ liệu ra 1 mảng mới thì sử dụng map()
+
+
+So sánh filter và find
+find:
+    - Trả về element đầu tiên ngay sau khi đúng điều kiện
+    - Trả về undefined nếu k tìm thấy
+    - Dừng vòng lặp khi tìm thấy phần tử đúng điều kiện
+
+filter:
+    - Trả về 1 array thỏa điều kiện
+    - Trả về mảng rỗng nếu không có phần tử nào thỏa điều kiện
+    - Lặp qua tất cả các phần tử trong mảng
+
+
+So sánh findIndex và indexOf
+indexOf: 
+    - Tìm index của một array kiểu primitive types (string, number, boolean)
+    - Nên sử dụng khi muốn tìm index của lần xuất hiện đầu tiên của 1 giá trị cụ thể trong mảng
+
+findIndex:
+    - Tìm index của một array non-primitive types và những điều kiện phức tạp hơn
+    - Nếu sử dụng khi muốn tìm index của phần tử mà thõa mãn điều kiện
+
+
+So sánh indexOf và includes
+indexOf:
+    - NaN và undefined sẽ không thể tìm thấy
+    - Trả về index của phần tử
+
+includes:
+    - Có thể tìm thấy NaN và undefined
+    - Trả về kiểu Boolean
+
+Ex:
+    let a = [1,true,3,NaN];
+    a.includes(NaN) // => true
+    a.indexOf(NaN) // => -1; indexOf can't find NaN
+-> Về hiệu suất includes có thể chậm hơn một chút (rất nhỏ) nhưng không đáng kể
+
+
+
+
+
+
+
+
+

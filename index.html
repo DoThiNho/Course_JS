@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="search-container">
+      <h3>Bài 1:</h3>
+      <form class="search-form">
+        Name or Source:
+        <input type="text" name="name" class="name" required />
+        <input type="submit" value="Search" />
+      </form>
+      <p class="text-result"></p>
+    </div>
+
+    <div class="day-container">
+      <h3>Bài 2:</h3>
+      <form class="day-form">
+        Number of days:
+        <input type="text" name="number" class="number" required />
+        <input type="submit" value="Submit" />
+      </form>
+      <p class="day-result"></p>
+    </div>
+
+    <div class="calculator-container">
+      <h3>Bài 3:</h3>
+      <h3>Calculator</h3>
+      <label>X=</label>
+      <textarea name="inputX" class="input-x" cols="50" rows="5"></textarea
+      ><br />
+      <label>Y=</label>
+      <textarea name="inputY" class="input-y" cols="50" rows="5"></textarea>
+      <div class="btn-calculator">
+        <button value="+" class="btn btn-add">X + Y</button>
+        <button value="-" class="btn btn-sub">X - Y</button>
+        <button value="*" class="btn btn-mul">X * Y</button>
+        <button value="/" class="btn btn-div">X / Y</button>
+      </div>
+      <p class="result-calculator"></p>
+    </div>
+
+    <script src="./assets/js/base.js"></script>
+  </body>
+</html>
